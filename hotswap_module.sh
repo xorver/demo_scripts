@@ -2,6 +2,8 @@
 
 set -e
 
+~/op-worker/make.py compile
+
 for host in gp1 gp2
 do
     scp ~/op-worker/ebin/${1}.beam ${host}:~/
