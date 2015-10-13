@@ -22,3 +22,6 @@ sudo yum install botan-devel gmp-devel make openssl-devel libtool-ltdl-devel gcc
 echo '130.211.151.116 onedata.org ggr' >> /etc/hosts
 echo '23.236.57.56    gp1.c.onedata-dev.internal gp1' >> /etc/hosts
 echo '146.148.82.243  gp2.c.onedata-dev.internal gp2' >> /etc/hosts
+
+# locale
+sudo sh -c ' echo \'LC_ALL="en_US.UTF-8"\' > /etc/environment'
