@@ -2,11 +2,11 @@
 
 set -e
 
-~/op-worker/make.py compile
+~/op-worker-demo/make.py compile
 
 for host in gp1 gp2
 do
-    scp ~/op-worker/ebin/${1}.beam ${host}:~/
+    scp ~/op-worker-demo/ebin/${1}.beam ${host}:~/
     ssh -tt ${host} sudo cp ~/${1}.beam '/opt/oneprovider/nodes/worker/lib/oneprovider_node-*/ebin/'
     ssh -tt ${host} sudo cp ~/${1}.beam '/opt/oneprovider/nodes/ccm/lib/oneprovider_node-*/ebin/'
 
